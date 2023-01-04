@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Whack A Mole!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="app.js" href="app.js">
 </head>
 <body>
 
     <h1>Whack-A-Mole! <span class="Score">0</span></h1>
+    <button cnclick="startGame()">Start!</button>
+
     <div class="game">
         <div class="hole hole1">
             <div class="mole"></div>
@@ -29,40 +32,6 @@
             <div class="mole"></div>
         </div>
     </div>
-
-<script>
-    const holes = document.querySelector('.hole');
-    const scoreboard = document.querySelector('score');
-    const moles = document.querySelector('.mole');
-    let lasthole;
-
-
-    function randomtime(min, max){
-        return Math.round(Math.random() * (max -min) + min);
-    }
-
-    function randomHole(holes){
-        const idx = Maqth.floor(Math.random() * holes.length)
-        const hole = holes[idx];
-        if(hole === lastHole) {
-        console.log('nope');
-        return randomHole(holes);
-        }
-
-        lastHole= hole;
-        return hole;
-    }
-
-    function peep(){
-     const time= randomTime(200,1000);
-     const hole = randomHole(hsoles);   
-     hole.classList.add('up');
-    }
-
-</script>
-
-
-
 
     
 </body>
